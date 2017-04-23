@@ -1,0 +1,140 @@
+
+<html>
+    <head>
+        <style>
+            body {
+              background: green; /* For browsers that do not support gradients */
+              background: -webkit-linear-gradient(left top, green, yellow); /* For Safari 5.1 to 6.0 */
+              background: -o-linear-gradient(bottom right, green, yellow); /* For Opera 11.1 to 12.0 */
+              background: -moz-linear-gradient(bottom right, green, yellow); /* For Firefox 3.6 to 15 */
+              background: linear-gradient(to bottom right, green, yellow); /* Standard syntax */
+              color:white;
+            }
+            #display_text{
+                font-weight:bold;
+                font-size: 25;
+            }
+            img {
+                padding-top:10px;
+                max-width: 700;
+                max-height: 500;
+        </style>
+    </head>
+    <body>
+
+        <h2>What would you be doing in the park on a Sunday?</h2>
+        <div>Enter your Myers-Briggs type below.</div>
+
+        <br></br>
+
+        <select id="vertness">
+            <option>E</option>
+            <option>I</option>
+        </select>
+        <select id="info">
+            <option>N</option>
+            <option>S</option>
+        </select>
+        <select id="brain">
+            <option>T</option>
+            <option>F</option>
+        </select>
+        <select id="structure">
+            <option>P</option>
+            <option>J</option>
+        </select>
+
+        <br></br>
+
+        <button onclick="displayType()">Submit</button>
+
+        <br></br>
+
+        <div>
+            <div id="display_text"></div>
+            <img id="display_image" src="http://cliparts.co/cliparts/BTg/rbz/BTgrbzRkc.jpg"></img>
+        </div>
+
+    </body>
+</html>
+
+<script>
+function displayType() {
+    var vertness = document.getElementById("vertness").value;
+    var info = document.getElementById("info").value;
+    var brain = document.getElementById("brain").value;
+    var structure = document.getElementById("structure").value;
+    var display_text = document.getElementById("display_text");
+    var display_image = document.getElementById("display_image");
+
+    if (vertness == "I" && info == "S" && brain == "T" && structure == "P") {
+        display_text.innerHTML = "Figuring out how to rescue a cat from the top of a redwood tree";
+        display_image.src = "http://i.dailymail.co.uk/i/pix/2010/04/17/article-0-0929370D000005DC-147_306x616.jpg";
+    }
+    if (vertness == "I" && info == "S" && brain == "T" && structure == "J") {
+        display_text.innerHTML = "Thinks this whole park thing is BS";
+        display_image.src = "https://img.buzzfeed.com/buzzfeed-static/static/2014-05/campaign_images/webdr02/22/15/21-times-eye-rolling-is-completely-justified-2-20556-1400785460-2_dblbig.jpg";
+    }
+    if (vertness == "I" && info == "S" && brain == "F" && structure == "P") {
+        display_text.innerHTML = "Taking up tight-roping";
+        display_image.src = "http://www.zotday.be/images/Slackline.jpg";
+    }
+    if (vertness == "I" && info == "S" && brain == "F" && structure == "J") {
+        display_text.innerHTML = "Offered to help an old lady cross the street, has now left the park and become her permanent caretaker";
+        display_image.src = "https://s-media-cache-ak0.pinimg.com/736x/36/b1/af/36b1afa87e2ab2e18d3263e048e7f760.jpg";
+    }
+    if (vertness == "I" && info == "N" && brain == "T" && structure == "P") {
+        display_text.innerHTML = "Designing how the park could be better";
+        display_image.src = "https://image.shutterstock.com/z/stock-photo-landscape-architect-designing-20154190.jpg";
+    }
+    if (vertness == "I" && info == "N" && brain == "T" && structure == "J") {
+        display_text.innerHTML = "Getting someone's number, sending an off-putting text, over-analyzing the lack of response";
+        display_image.src = "http://i.dailymail.co.uk/i/pix/2014/06/19/article-2661510-1EE9D69500000578-135_634x324.jpg";
+    }
+    if (vertness == "I" && info == "N" && brain == "F" && structure == "J") {
+        display_text.innerHTML = "Giving out cupcakes";
+        display_image.src = "http://cdn.images.express.co.uk/img/dynamic/106/590x/prince-harry-576605.jpg";
+    }
+    if (vertness == "I" && info == "N" && brain == "F" && structure == "P") {
+        display_text.innerHTML = "People watching and having all the feeels";
+        display_image.src = "http://positiveparenting.com/wp-content/uploads/2011/11/kid-crying-boy-outside-shutterstock_35876266-880x340.jpg";
+    }
+
+    if (vertness == "E" && info == "S" && brain == "T" && structure == "P") {
+        display_text.innerHTML = "Building a bonfire to make dinner";
+        display_image.src = "https://c1.staticflickr.com/7/6110/6318270616_4ede04946a_b.jpg";
+    }
+    if (vertness == "E" && info == "S" && brain == "T" && structure == "J") {
+        display_text.innerHTML = "Organizing a campaign to achieve a higher trash can to person ratio";
+        display_image.src = "https://ivn.us/wp-content/uploads/2011/01/petition.jpg";
+    }
+    if (vertness == "E" && info == "S" && brain == "F" && structure == "P") {
+        display_text.innerHTML = "Somehow ending up starring in a flash mob";
+        display_image.src = "https://www.israel21c.org/wp-content/uploads/2016/03/Acro-yoga-flash-mob-in-Tel-Aviv.-Photo-by-Eyal-Bar-1168x657.jpg";
+    }
+    if (vertness == "E" && info == "S" && brain == "F" && structure == "J") {
+        display_text.innerHTML = "Trying to become the mayor of the park on FourSquare";
+        display_image.src = "http://endtimeheadlines.org/wp-content/uploads/2016/01/Obama-Imperial-Cloaked.jpg";
+    }
+    if (vertness == "E" && info == "N" && brain == "T" && structure == "P") {
+        display_text.innerHTML = "Giving a park tour";
+        display_image.src = "http://www.eenorthcarolina.org/images/state%20Park%20Ranger.jpg";
+    }
+    if (vertness == "E" && info == "N" && brain == "T" && structure == "J") {
+        display_text.innerHTML = "Turning the park into a commercial enterprise";
+        display_image.src = "https://dpmassociates.files.wordpress.com/2012/07/pic-for-paper.jpg";
+    }
+    if (vertness == "E" && info == "N" && brain == "F" && structure == "J") {
+        display_text.innerHTML = "Asking people about their relationship status and giving unsolicited advice";
+        display_image.src = "https://i.ytimg.com/vi/FrdgH4kMS1I/maxresdefault.jpg";
+    }
+    if (vertness == "E" && info == "N" && brain == "F" && structure == "P") {
+        display_text.innerHTML = "Milling around, talking to strangers";
+        display_image.src = "https://missionhipsters.files.wordpress.com/2013/07/hey-cookie-dolores-park.jpg";
+    }
+}
+
+</script>
+
+
+
